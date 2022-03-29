@@ -1,0 +1,33 @@
+step1- created a directory stage1-review.
+
+step2- created files (day4.sh,x.java,y.py,z.js) inside stage1-review directory.
+
+step3- uses nano day4.sh to do editing/modification for given condition
+
+step4- inside day4.sh scripting file uses for loop for given condition
+        (nano day4.sh)
+
+step5- using for loop to read each file and to display files with x.java,y.py,z.js
+        (for files in `ls *.java` ls *.py` ls *.js`)
+
+step6- using for loop and awk to display file 
+
+
+
+
+          for files in `ls *.java` `ls *.py` `ls *.js`
+do
+  folderName=`echo $files | awk -F. '{print $1}'`
+  folderName2=`echo $files | awk -F. '{print $2}'`
+      mkdir -p $folderName/$folderName2
+      mv $files $folderName/$folderName2
+done
+
+
+
+
+        - starting the loop with do
+        - using awk to read the file name into folderName
+        - making directory with the filename
+        - moving the file into folder using $folderName
+        - indicating done to close for loop
