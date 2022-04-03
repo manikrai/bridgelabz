@@ -1,0 +1,17 @@
+step1-takes the input from user 
+      
+      to take input I uses the keyword read -p
+step2-
+      after that uses for loop
+   
+     ( for ch in {a..z} )
+     ch stands for characters and {a..z} characters from a to z
+step3-
+          uses a variable (var)
+           ( var=${text//[^$ch]/} )
+         $text will store the input string i.e enterd by user
+
+step4-
+       to get the output uses thes keyword 
+         echo " ${ch} presents ${#var} times"
+
